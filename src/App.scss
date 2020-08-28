@@ -1,5 +1,6 @@
 $fg-dark: black;
 $fg-light: antiquewhite;
+$bg-light: antiquewhite;
 
 $bg-tool: #C6CDAC;
 $bg-nav: desaturate(darken($bg-tool, 10%), 5%);
@@ -50,8 +51,15 @@ $bg-text: desaturate(lighten(#1e1b3b, 10%), 10%);
         width: 200px;
         background: $bg-tool;
         padding: 1rem 2rem;
+
+        display: flex;
+        flex-direction: column;
+
         h1{
             margin-bottom: 1rem;
+        }
+        h2{
+            margin-bottom: 2rem;
         }
     }
 
@@ -61,6 +69,23 @@ $bg-text: desaturate(lighten(#1e1b3b, 10%), 10%);
             text-decoration: underline;
         }
     }
+
+    textarea{
+        background: transparentize($bg-light, .5);
+        padding: 10px;
+        border-radius: 3px;
+        box-shadow: 0 2px 5px rgba(0,0,0,.2) inset,
+                    0 1px 1px rgba(255,255,255,.5);
+        border: solid 1px transparentize(darken($bg-tool, 10%), .5);
+    }
+    label > textarea{
+        margin-top: 5px;
+        margin-left: -10px
+    }
+    label {
+        padding-left: 10px;
+    }
+
 
     .scratchPad{
         flex-grow: 1;

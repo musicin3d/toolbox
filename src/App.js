@@ -12,19 +12,7 @@ import { highlight, languages } from 'prismjs/components/prism-core'
 import 'prismjs/components/prism-clike'
 import 'prism-themes/themes/prism-atom-dark.css'
 import './App.scss'
-
-
-const routes = [
-    {
-        path: '/about',
-        title: 'About',
-        render: 'About?'
-    }, {
-        path: '/users',
-        title: 'Users',
-        render: 'Users!!'
-    }
-]
+import routes from './routes'
 
 
 function App() {
@@ -59,7 +47,8 @@ function App() {
                     <Switch>
                         {routes.map((route) => (
                             <Route path={route.path}>
-                                {route.render}
+                                <h2>{route.title}</h2>
+                                <route.render/>
                             </Route>
                         ))}
                         <Route path="/">
