@@ -1,0 +1,78 @@
+$fg-dark: black;
+$fg-light: antiquewhite;
+
+$bg-tool: #C6CDAC;
+$bg-nav: desaturate(darken($bg-tool, 10%), 5%);
+$bg-text: desaturate(lighten(#1e1b3b, 10%), 10%);
+
+.App {
+
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    color: $fg-dark;
+
+    h1, h2 {
+        font-weight: bold;
+        opacity: .5;
+        padding: 0;
+        margin: 0;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    nav {
+        flex-grow: 0;
+        flex-shrink: 2;
+        width: 6rem;
+        background: $bg-nav;
+        padding: 2rem;
+
+        ul {
+            margin: 1rem 0;
+            padding: 0;
+        }
+        li {
+            margin: 0 0 .5rem;
+            padding: 0;
+            list-style: none;
+        }
+
+    }
+
+    .tool {
+        flex-grow: 1;
+        flex-shrink: 0;
+        width: 200px;
+        background: $bg-tool;
+        padding: 1rem 2rem;
+    }
+
+    a {
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+    .textPad{
+        flex-grow: 1;
+        flex-shrink: 1;
+        width: 200px;
+        background: $bg-text;
+        color: $fg-light;
+        padding: .5rem;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            margin-bottom: .5rem;
+            margin-left: 10px;
+        }
+    }
+
+}
