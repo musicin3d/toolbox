@@ -4,7 +4,8 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
+    Link,
+    NavLink
 } from "react-router-dom"
 import Editor from 'react-simple-code-editor'
 import { highlight, languages } from 'prismjs/components/prism-core'
@@ -41,7 +42,12 @@ function App() {
                         </li>
                         {routes.map((route) => (
                             <li>
-                                <Link to={route.path}>{route.title}</Link>
+                                <NavLink
+                                    to={route.path}
+                                    activeStyle={{ fontWeight: 'bold'}}
+                                >
+                                    {route.title}
+                                </NavLink>
                             </li>
                         ))}
                     </ul>
