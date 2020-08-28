@@ -50,6 +50,9 @@ $bg-text: desaturate(lighten(#1e1b3b, 10%), 10%);
         width: 200px;
         background: $bg-tool;
         padding: 1rem 2rem;
+        h1{
+            margin-bottom: 1rem;
+        }
     }
 
     a {
@@ -59,7 +62,7 @@ $bg-text: desaturate(lighten(#1e1b3b, 10%), 10%);
         }
     }
 
-    .textPad{
+    .scratchPad{
         flex-grow: 1;
         flex-shrink: 1;
         width: 200px;

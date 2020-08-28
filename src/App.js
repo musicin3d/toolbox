@@ -13,6 +13,18 @@ import 'prism-themes/themes/prism-atom-dark.css'
 import './App.scss'
 
 
+const routes = [
+    {
+        path: '/about',
+        title: 'About',
+        render: 'About?'
+    }, {
+        path: '/users',
+        title: 'Users',
+        render: 'Users!!'
+    }
+]
+
 
 function App() {
 
@@ -27,31 +39,29 @@ function App() {
                         <li>
                             <Link to="/">Home</Link>
                         </li>
-                        <li>
-                            <Link to="/about">About</Link>
-                        </li>
-                        <li>
-                            <Link to="/users">Users</Link>
-                        </li>
+                        {routes.map((route) => (
+                            <li>
+                                <Link to={route.path}>{route.title}</Link>
+                            </li>
+                        ))}
                     </ul>
                 </nav>
                 {/* A <Switch> looks through its children <Route>s and
                 renders the first one that matches the current URL. */}
                 <div className="tool">
+                    <h1>Hacker's Tool Box</h1>
                     <Switch>
+                        {routes.map((route) => (
+                            <Route path={route.path}>
+                                {route.render}
+                            </Route>
+                        ))}
                         <Route path="/">
-                            <h1>Hacker's Tool Box</h1>
                             <p>Select a tool from the left</p>
-                        </Route>
-                        <Route path="/about">
-                            About
-                        </Route>
-                        <Route path="/users">
-                            Users
                         </Route>
                     </Switch>
                 </div>
-                <div className="textPad">
+                <div className="scratchPad">
                     <h2>Scratch pad</h2>
                     <Editor
                         value={text}
