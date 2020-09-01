@@ -1,4 +1,4 @@
-import Md5Tool from './tools/md5'
+import Md5Tool from './tools/Md5'
 
 
 export default [

@@ -1,0 +1,61 @@
+//noinspection SassScssResolvedByNameOnly
+.Tool {
+    $bg: transparentize($bg-light, .5);
+    $bg-controls: darken($bg, 10%);
+    $border: transparentize(darken($bg-tool, 10%), .5);
+
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    textarea {
+        display: block;
+        height: 5rem;
+        background: $bg;
+        padding: 10px;
+        border-radius: 3px;
+        box-shadow: 0 2px 5px rgba(0,0,0,.2) inset,
+                    0 1px 1px rgba(255,255,255,.5);
+        border: solid 1px $border;
+    }
+
+    label {
+        padding-left: 10px;
+
+        &.input,
+        &.output{
+            display: flex;
+            flex-direction: column;
+        }
+
+        &.output{
+            margin-top: -1rem;
+        }
+
+        textarea{
+            margin-top: 5px;
+            margin-left: -10px
+        }
+    }
+
+    $spacing: .5rem;
+
+    .controls {
+        box-shadow: 0 1px 3px rgba(0,0,0,.3);
+        border-radius: 5px;
+        padding: 1rem;
+        margin-top: $spacing;
+        background: $bg-controls;
+    }
+
+    .transition {
+        width: 100%;
+        text-align: center;
+        margin: $spacing 0 0;
+        font-size: 3rem;
+        color: $bg;
+        font-weight: bolder;
+    }
+
+}

@@ -42,7 +42,7 @@ function App() {
                 </nav>
                 {/* A <Switch> looks through its children <Route>s and
                 renders the first one that matches the current URL. */}
-                <div className="tool">
+                <div className="tool-area">
                     <h1>Hacker's Tool Box</h1>
                     <Switch>
                         {routes.map((route) => (
