@@ -40,16 +40,23 @@ function App() {
                         ))}
                     </ul>
                 </nav>
-                {/* A <Switch> looks through its children <Route>s and
-                renders the first one that matches the current URL. */}
                 <div className="tool-area">
                     <h1>Hacker's Tool Box</h1>
                     <Switch>
-                        {routes.map((route) => (
-                            <Route path={route.path}>
-                                <h2>{route.title}</h2>
-                                <route.render/>
-                            </Route>
+                        {routes.map((route, i) => (
+                            route.routes ? (
+                                route.routes.map((route, j) => (
+                                    <Route key={i+'.'+j} path={route.path}>
+                                        <h2>{route.title}</h2>
+                                        <route.render/>
+                                    </Route>
+                                ))
+                            ) : (
+                                <Route key={i} path={route.path}>
+                                    <h2>{route.title}</h2>
+                                    <route.render/>
+                                </Route>
+                            )
                         ))}
                         <Route path="/">
                             <p>Select a tool from the left</p>

@@ -1,0 +1,9 @@
+$fg-dark: black;
+$fg-light: antiquewhite;
+$bg-light: antiquewhite;
+
+$bg-tool: #C6CDAC;
+$bg-nav: desaturate(darken($bg-tool, 10%), 5%);
+$bg-text: desaturate(lighten(#1e1b3b, 10%), 10%);
+
+$color-link: rgb(85, 26, 139)

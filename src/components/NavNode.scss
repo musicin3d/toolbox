@@ -1,0 +1,32 @@
+@import "../config";
+
+
+.NavNode {
+
+    .title{
+        cursor: pointer;
+        color: $color-link;
+
+        &.open{
+            &::after{
+                content: ' \25BC';
+            }
+        }
+        &.closed{
+            &:hover::after{
+                content: ' \25BD';
+            }
+        }
+    }
+
+    ul {
+        margin: .5rem 0 .5rem 1rem;
+
+    }
+
+    .closed + ul {
+        display: none;
+    }
+
+}
+
