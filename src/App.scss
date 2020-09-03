@@ -14,12 +14,6 @@
         padding: 0;
         margin: 0;
     }
-    h1{
-        font-size: 2rem;
-    }
-    h2 {
-        font-size: 1.1rem;
-    }
 
     .tool-area {
         flex-grow: 1;
@@ -71,8 +65,12 @@ nav {
     background: $bg-nav;
     padding: 2rem;
 
+    h2 {
+       margin-top: 1.5rem !important;
+    }
+
     ul {
-        margin: 1rem 0;
+        margin: .5rem 0;
         padding: 0;
     }
     li {
@@ -80,6 +78,7 @@ nav {
         padding: 0;
         list-style: none;
     }
+
 }
 
 

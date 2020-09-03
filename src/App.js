@@ -23,20 +23,15 @@ function App() {
         <div className="App">
             <Router>
                 <nav>
-                    <h2>Tools</h2>
                     <ul>
                         <li>
                             <Link to="/">Home</Link>
                         </li>
-                        {routes.map((route) => (
-                            <li>
-                                <NavLink
-                                    to={route.path}
-                                    activeStyle={{ fontWeight: 'bold'}}
-                                >
-                                    {route.title}
-                                </NavLink>
-                            </li>
+                    </ul>
+                    <h2>Tools</h2>
+                    <ul>
+                        {routes.map((route, i) => (
+                            <NavNode key={i} id={i} route={route}/>
                         ))}
                     </ul>
                 </nav>
