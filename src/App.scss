@@ -1,11 +1,12 @@
 @import "config";
 
+$padding: 1.5rem;
 
 .App {
 
     display: flex;
     flex-direction: row;
-    height: 100%;
+    min-height: 100%;
     color: $fg-dark;
 
     h1, h2 {
@@ -20,7 +21,7 @@
         flex-shrink: 0;
         width: 200px;
         background: $bg-tool;
-        padding: 1rem 2rem;
+        padding: $padding/2 $padding;
 
         display: flex;
         flex-direction: column;
@@ -61,9 +62,9 @@
 nav {
     flex-grow: 0;
     flex-shrink: 2;
-    width: 6rem;
+    width: 7rem;
     background: $bg-nav;
-    padding: 2rem;
+    padding: ($padding/2 * 3/2) $padding;
 
     h2 {
        margin-top: 1.5rem !important;
