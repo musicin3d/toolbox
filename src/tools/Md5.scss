@@ -1,9 +1,35 @@
 .Md5Tool {
 
-    .mode {
+    input[type=radio]{
+        margin: 0 .5em 0 0;
+    }
+
+    .controls{
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: center;
+    }
+
+    .control {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-right: 2em;
+        margin-right: 2em;
+        border-right: solid 1px rgba(0,0,0,.1);
+        &:last-child{
+            padding-right: 0;
+            margin-right: 0;
+            border-right: none;
+        }
+    }
+
+    label{
+        padding: 0;
+        margin-bottom: .5em;
+        &:last-child{
+            margin-bottom: 0;
+        }
     }
 
 }
